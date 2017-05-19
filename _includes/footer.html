@@ -4,6 +4,9 @@
   </div>
 </footer>
 
+<!-- Style -->
+<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
 <!-- Highlight -->
 <script src="/blog/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -22,24 +25,6 @@
 
 <!-- JS blog -->
 <script>
-    // menu toggle
-    var menu = document.querySelector('.block__menu');
-
-    // open
-    document.querySelector('.block__header--btn-menu').onclick = function() {
-      menu.classList.add('active');
-
-      if(menu.classList.contains('inactive'))
-        menu.classList.remove('inactive');
-
-    };
-    // close
-    document.querySelector('.block__menu--close').onclick = function() {
-      menu.classList.add('inactive');
-      if(menu.classList.contains('active'))
-        menu.classList.remove('active');
-    };
-
     // social buttons
     document.querySelector('.block__share--twitter a').onclick = function(e) {
       e.stopPropagation();
