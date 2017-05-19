@@ -1,0 +1,21 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Blog - Guilherme Modugno - Desenvolvedor Web
+email: g.modugno@hotmail.com
+description: > # Esse blog tem como objetivo ensinar, por meio de artigos e tutoriais, boas práticas de programação, tirar dúvidas a respeito de alguns recursos de PHP, e focado principalmente em desenvolvimento Web com PHP.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://modugno.github.io/" # the base hostname & protocol for your site
+twitter_username: gmodugno
+github_username:  modugno
+exclude: [node_modules, Gruntfile.js, package.json]
+sass: 
+    style: :compressed
+# Build settings
+markdown: kramdown
+permalink: /:title

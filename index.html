@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section id="posts"> <!-- post -->
+  {% for post in site.posts %}
+  <article class="card__content" itemscope itemtype="http://schema.org/BlogPosting">
+    <span class="card__content--date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <a class="card__content--title-link" href="{{ post.url | prepend: site.baseurl }}">
+      <h1 class="card__content--title-text">
+        {{ post.title }}
+      </h1>
+    </a>
+    <article class="card__content--text">
+      {{ post.content | truncatewords: 30}}
+    </article>
+  </article>
+
+  {% endfor %}
+</section> <!-- end post -->

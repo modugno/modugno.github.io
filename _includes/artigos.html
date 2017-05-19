@@ -1,0 +1,28 @@
+<section id="about"> <!-- post -->
+	<article class="card__content">
+		<h1 class="card__content--title-text card__content--title-text-content">
+			Artigos
+		</h1>
+		<article class="card__content--text card__content--text-content about">
+			<!-- listar categorias -->
+			{% for category in site.categories %}
+			<h3>{{ category | first }}</h3>
+			<ul class="card__content--list-tutorial">
+				{% for posts in category %}
+				{% for post in posts %}
+				<li>
+					<a href="{{ post.url | prepend: site.baseurl }}">
+						{{ post.title }}
+						<span class="tutorial--date">
+							<time datetime="2015-12-05" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+						</span>
+					</a>
+				</li>
+				{% endfor %}
+				{% endfor %}
+			</ul>
+			{% endfor %}
+		</article><!-- content post -->
+	</article><!-- content block -->
+
+			</section> <!-- end post -->
